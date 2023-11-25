@@ -1,0 +1,252 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* width: 100%; */
+}
+
+.container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  gap: .5rem;
+  /* justify-content: space-between; */
+}
+
+.App>.div-need {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: right;
+  margin: .5rem;
+  gap: .1rem;
+}
+
+.card-name {
+  width: 160px;
+  height: 350px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 20px;
+  /* width: 50%; */
+  height: 45px;
+  position: relative;
+  bottom: 25px;
+  max-width: 100%;
+  bottom: -10px;
+  right: -138px;
+}
+
+.search>input {
+  text-align: center;
+  border-radius: 5px;
+  width: 500px;
+  height: 70%;
+
+}
+
+.search>button {
+  text-align: center;
+  width: 100px;
+  border-radius: 30px;
+  height: 70%;
+}
+
+.search>.suggestions-list {
+  position: absolute;
+  top: 40px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  width: 500px;
+  max-width: 100%;
+}
+
+.suggestions-list>h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.suggestions-list>h5:hover {
+  cursor: pointer;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    /* width: 10rem;
+    position: fixed;
+    right: -1%;
+    top: 50%;
+    z-index: 1000; */
+  }
+}
+
+.card-body {
+  padding: 0 !important;
+  text-align: center;
+}
+
+.filter-type {
+  position: 'relative';
+  z-index: '30000';
+}
+
+.all-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info-aboutme {
+  position: fixed;
+  z-index: 5000;
+  top: 55%;
+  right: 130%;
+  fill: goldenrod;
+}
+
+
+
+.div-socials {
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative;
+  gap: 20px;
+  top: 5px;
+  right: 5px;
+  /* width: 100px; */
+}
+
+.div-socials > a {
+  margin: 0 !important;
+}
+
+.socials-items>img {
+  width: 35px;
+  right: 120px;
+  top: 80px;
+
+}
+
+.pag-item{
+  position: relative;
+  display: flex;
+  top: -300px;
+}
+
+@media (max-width: 800px) {
+  .about-us-info {
+    position: fixed;
+    top: -1000px;
+  }
+
+
+  .contact-box.card {
+    position: fixed !important;
+    width: 4rem;
+    height: 250px;
+    /* position: fixed; */
+    right: -3% !important;
+    top: 61%;
+    z-index: 800;
+    /* right: 700px !important; */
+  }
+  /* icono encima de contactanos */
+
+  /* TITULO CONTACTANOS */
+
+  .info-title {
+    font-size: 14px !important;
+    width: 100px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    color: black;
+    /* -webkit-animation: glow 1s ease-in-out infinite alternate; */
+    /* -moz-animation: glow 1s ease-in-out infinite alternate; */
+    /* animation: glow 1s ease-in-out infinite alternate; */
+  }
+
+  .info-aboutme {
+    position: fixed;
+    z-index: 1000;
+    top: 1%;
+    right: 5% !important;
+    fill: goldenrod;
+  }
+
+  .pag-item{
+    position: relative;
+    display: flex;
+    top: 90px;
+  }
+
+}
+
+/* para que no se vea en escritorio */
+
+
+/* test */
+
+.contact-box.card {
+  position: fixed !important;
+  width: 4rem;
+  height: 250px;
+  /* position: fixed; */
+  right: -1%;
+  top: 61%;
+  z-index: 800;
+  /* right: 700px !important; */
+}
+
+.contact-box.card {
+  margin: 0;
+}
+
+/* GLOW FOR FONTS */
+/* CLASS FOR THE CATEGORY CONFIG */
+.category-f {
+  text-align: center !important;
+  font-size: 16px;
+  color: black !important;
+  font-weight: bold !important;
+  text-align: center;
+  /* -webkit-animation: glow 1s ease-in-out infinite alternate; */
+  /* -moz-animation: glow 1s ease-in-out infinite alternate; */
+  /* animation: glow 1s ease-in-out infinite alternate; */
+}
+
+@-webkit-keyframes glow {
+
+  /* from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  } */
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
+.dropdown-cat {
+  display: flex !important;
+  align: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 900;
+  text-align: center;
+  top: 75px;
+}
+
+
+.modalCustom {
+ 
+  background-color: #ffffff6e;
+  backdrop-filter: blur(5px);
+}
+
