@@ -31,7 +31,6 @@ const Cards = ({ data, pag, view }) => {
     return (
         filteredData.map?.((data) => (
             <div key={data?.id} className='card-item'>
-                <ModalFeature show={show} setShow={setShow} />
                 <Card style={{ width: '10rem', height: '21rem' }}>
                     <Card.Img style={{
                         width: '160px',
@@ -44,7 +43,8 @@ const Cards = ({ data, pag, view }) => {
                             width: '128px',
                             height: '50px',
                             position: 'relative',
-                            top: '10px'
+                            top: '10px',
+                            overflow: 'auto'
                         }}>{data.name}</Card.Title>
                         {/* <Card.Text>
                             Some quick example text to build on the card title and make up the

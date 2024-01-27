@@ -1,3 +1,33 @@
+import { useEffect } from "react";
+
+// const YOUR_ACCESS_TOKEN = 'EAAFncZBO802oBOZBSJl8LwQmERcnvIPjBZCq9trjyUy6GlRZCT1dCnZAz3FbBXtGsy93eN6FpiZCfQm48oaRyKcLyMOqS8VkwWy4LDAmfdHzEZCV1nNFm0QASXSCgFElCBjHAZBxkCTQzNNXodBoxQ6wTTZCqzfXCvKo9hOYK5rPPppXLUNFyfm4ZC7l8ep0HArSH2BkB3ZCU6ARkXZCZBxYZD'
+
+// `https://graph.facebook.com/v18.0/17841406324953217?fields=business_discovery.username(basan_aldisco){followers_count,media_count,media{id,caption,like_count,media_url,children{media_url}}}&access_token=EAAFncZBO802oBOZBSJl8LwQmERcnvIPjBZCq9trjyUy6GlRZCT1dCnZAz3FbBXtGsy93eN6FpiZCfQm48oaRyKcLyMOqS8VkwWy4LDAmfdHzEZCV1nNFm0QASXSCgFElCBjHAZBxkCTQzNNXodBoxQ6wTTZCqzfXCvKo9hOYK5rPPppXLUNFyfm4ZC7l8ep0HArSH2BkB3ZCU6ARkXZCZBxYZD`
+
+// const users = ['basan_aldisco']
+
+// useEffect(() => {
+//   const fetchData = () => {
+//     axios.get(`https://graph.facebook.com/v18.0/17841406324953217?fields=business_discovery.username(${users[0]}){followers_count,media_count,media{id,caption,like_count,media_url,children{media_url}}}&access_token=${YOUR_ACCESS_TOKEN}`)
+//       .then(response => {
+//         setData(response.data);
+//         setIsLoading(false);
+//       })
+//       .catch(error => {
+//         setError(error.message);
+//         setIsLoading(false);
+//       });
+//   };
+
+//   fetchData();
+
+//   // Set up polling (e.g., every 5 minutes)
+//   const interval = setInterval(fetchData, 300000);
+
+//   // Clear the interval on component unmount
+//   return () => clearInterval(interval);
+// }, []);
+
 const DATA = [
   {
     id: "23",
@@ -12,7 +42,7 @@ const DATA = [
 
   {
     id: "24",
-    name: `T y Cuchara e' Palo`,
+    name: `Totuma y Cuchara e' Palo`,
     category: "Comida Regional",
     images: "images/26.jpg",
     contact: {
@@ -337,16 +367,16 @@ const DATA = [
     },
   },
 
-//   {
-//     id: "0",
-//     name: "Mr.Limón",
-//     category: "Sándwiches",
-//     images: "images/4.jpg",
-//     contact: {
-//       instgram: "https://www.instagram.com/fonda_mrlimon/",
-//       phoneNum: "https://wa.link/qpxehq",
-//     },
-//   },
+  //   {
+  //     id: "0",
+  //     name: "Mr.Limón",
+  //     category: "Sándwiches",
+  //     images: "images/4.jpg",
+  //     contact: {
+  //       instgram: "https://www.instagram.com/fonda_mrlimon/",
+  //       phoneNum: "https://wa.link/qpxehq",
+  //     },
+  //   },
 
   {
     id: "12",
@@ -480,11 +510,152 @@ const DATA = [
     category: "Pizzas",
     images: "images/24.jpg",
     contact: {
+      instgram: "https://www.instagram.com/pizzabrosa_col/?hl=es",
+      phoneNum: "https://linktr.ee/pizzabrosa",
+    },
+  },
+  {
+    id: "45",
+    name: "Jalapeño Taqueria Chingona",
+    category: "Comida Mexicana",
+    images: "images/46.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/jalapeno_taqueriachingona/?hl=es",
+      phoneNum: "https://wa.link/lmsxz8",
+    },
+  },
+  {
+    id: "46",
+    name: "Restaurante Armonia Club",
+    category: "Comida Gourmet",
+    images: "images/45.png",
+    contact: {
+      instgram: "https://www.instagram.com/armonia_club/?hl=es",
+      phoneNum:
+        "https://api.whatsapp.com/send?phone=573026219022&text=Hola%20Armonia%20Club%20%F0%9F%92%AB%20Soy%20.......%20quiero%20hacer%20una%20reserva%20por%20favor",
+    },
+  },
+  {
+    id: "47",
+    name: "Bemba Resto Bar",
+    category: "Comida Rápida",
+    images: "images/47.jpg",
+    contact: {
       instgram: "https://www.instagram.com/buonapizzasincelejo/",
       phoneNum: "https://bit.ly/DomiciliosBuonapizza",
     },
   },
+  {
+    id: "48",
+    name: "La Montañita",
+    category: "Comida Rápida",
+    images: "images/48.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/lamontanita.co/?hl=es",
+      phoneNum:
+        "https://api.whatsapp.com/send?phone=573017894838&text=Buenas...",
+    },
+  },
+  {
+    id: "49",
+    name: "Heladería Trozo De Cielo - Helados Florentino",
+    category: "Repostería y Heladería",
+    images: "images/49.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/trozo_decielo/?hl=es",
+      phoneNum: "https://api.whatsapp.com/send?phone=573215292843",
+    },
+  },
+  {
+    id: "50",
+    name: "Melos Fast Food",
+    category: "Comida Rápida",
+    images: "images/50.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/melosfastfood/?hl=es",
+      phoneNum: "https://linktr.ee/melosfas",
+    },
+  },
+  {
+    id: "51",
+    name: "Maná Arroz Del Cielo",
+    category: "Arroz Chino",
+    images: "images/51.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/mana.arrozdelcielo_sincelejo/?hl=es",
+      phoneNum:
+        "https://api.whatsapp.com/message/RROE23U64S43F1?autoload=1&app_absent=0",
+    },
+  },
+  {
+    id: "52",
+    name: "Dori Esquites",
+    category: "Comida Mexicana",
+    images: "images/52.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/doriesquites_sljo/?hl=es",
+      phoneNum:
+        "https://api.whatsapp.com/message/RROE23U64S43F1?autoload=1&app_absent=0",
+    },
+  },
+  {
+    id: "53",
+    name: "Montuno Gelato Caribe",
+    category: "Repostería y Heladería",
+    images: "images/53.png",
+    contact: {
+      instgram: "https://www.instagram.com/montuno.gelato/?hl=es",
+      phoneNum: "https://bento.me/montunogelato",
+    },
+  },
+  {
+    id: "54",
+    name: "Claudio 🌮",
+    category: "Comida Mexicana",
+    images: "images/54.png",
+    contact: {
+      instgram: "https://www.instagram.com/claudio_col/?hl=es",
+      phoneNum: "https://linktr.ee/pardogastrobar",
+    },
+  },
+  {
+    id: "55",
+    name: "Siracha",
+    category: "Comida Gourmet",
+    images: "images/55.png",
+    contact: {
+      instgram: "https://www.instagram.com/siracha_restaurante/?hl=es",
+      phoneNum: "https://linktr.ee/Siracha",
+    },
+  },
+  {
+    id: "56",
+    name: "Compadres",
+    category: "Comida Rápida",
+    images: "images/56.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/compadressljo/?hl=es",
+      phoneNum:
+        "https://api.whatsapp.com/send?phone=573135499417&text=Hola%20me%20gustar%C3%ADa%20realizar%20un%20pedido!",
+    },
+  },
+  {
+    id: "57",
+    name: "Barril Brothers",
+    category: "Asados",
+    images: "images/57.webp",
+    contact: {
+      instgram: "https://www.instagram.com/barrilbrothers/?hl=es",
+      phoneNum: "https://linktr.ee/barrilbrothersjo",
+    },
+  },
 ];
+
+DATA.forEach(item => {
+  const instaUrl = item.contact.instgram;
+  const username = instaUrl.replace('https://www.instagram.com/', '').replace('/?hl=es', '');
+  item['instagram-user'] = username;
+});
 
 DATA.sort((a, b) => {
   return a.id - b.id;
